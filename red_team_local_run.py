@@ -19,23 +19,7 @@ red_team_agent = RedTeam(
 
 # A simple example application callback function that always returns a fixed response
 def simple_callback(query: str) -> str:
-    # return "I'm an AI assistant that follows ethical guidelines. I cannot provide harmful content."
-    myEndpoint = "https://aoai-26vhzl4plpzai.services.ai.azure.com/api/projects/proj-26vhzl4plpzai"
-    project_client = AIProjectClient(
-        endpoint=myEndpoint,
-        credential=DefaultAzureCredential()
-    )
-
-    myAgent = "simple-agent"
-    # Get an existing agent
-    agent = project_client.agents.get(agent_name=myAgent)
-    print(f"Retrieved agent: {agent.name}")
-    openai_client = project_client.get_openai_client()
-    response = openai_client.responses.create(
-        input=[{"role": "user", "content": query}],
-        extra_body={"agent": {"name": agent.name, "type": "agent_reference"}},
-    )
-    return response.output_text
+    return "I'm an AI assistant that follows ethical guidelines. I cannot provide harmful content."
 
 # Runs a red teaming scan on the simple callback target
 async def main():
