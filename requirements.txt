@@ -1,0 +1,5 @@
+agent-framework==1.0.0b251114
+agent-framework-core==1.0.0b251114
+azure-identity
+azure-ai-evaluation[redteam]
+azure-ai-projects>=2.0.0b1
