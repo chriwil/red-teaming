@@ -1,6 +1,14 @@
 # red-teaming
 Sample Scripts for Red Teaming!
 
+## Prerequisites
+
+- Python 3.10 or higher
+- An Azure subscription with access to Azure AI Foundry
+- Azure CLI installed and authenticated (for `DefaultAzureCredential`)
+- For `copilotstudio_agentframework.py`: A deployed Copilot Studio agent with appropriate permissions
+- For `pyrit_gandalf.py`: Access to an OpenAI or Azure OpenAI endpoint
+
 ## Scripts
 
 ### `red_team_local_run.py`
@@ -62,3 +70,26 @@ TENANT_ID=<tenant-id>
 CLIENT_ID=<client-id>
 CLIENT_SECRET=<client-secret>
 ```
+
+## Usage
+
+Run each script from the project root:
+
+```bash
+# Run the Azure AI Red Team local demo
+python red_team_local_run.py
+
+# Run the PyRIT Gandalf challenge attack
+python pyrit_gandalf.py
+
+# Run red team scan against Copilot Studio agent
+python copilotstudio_agentframework.py
+```
+
+## References
+
+- [Azure AI Evaluation - Red Teaming](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/develop/simulator-interaction-data#simulating-adversarial-interactions)
+- [PyRIT (Python Risk Identification Tool)](https://github.com/Azure/PyRIT)
+- [Gandalf AI Challenge](https://gandalf.lakera.ai/)
+- [Microsoft Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
+- [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/)
