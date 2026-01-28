@@ -21,7 +21,7 @@ async def main():
     print('async main just started')
     await initialize_pyrit_async(memory_db_type="InMemory", initializers=[SimpleInitializer()])
 
-    gandalf_level = GandalfLevel.LEVEL_3
+    gandalf_level = GandalfLevel.LEVEL_1
     print("Using Gandalf level:", gandalf_level)
 
     aoai_chat = OpenAIChatTarget()
